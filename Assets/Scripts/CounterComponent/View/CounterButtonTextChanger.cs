@@ -12,6 +12,7 @@ namespace Assets.Scripts.CounterComponent.View
         [SerializeField] private CounterButtonView _buttonView;
             
         private TextMeshProUGUI _textComponent;
+
         private string _currentText;
 
         private void Awake()

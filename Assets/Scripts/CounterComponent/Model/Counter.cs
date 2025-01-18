@@ -31,6 +31,11 @@ namespace Assets.Scripts.CounterComponent.Model
             _coroutineRunner.StartCoroutine(Tick());
         }
 
+        public void Pause()
+        {
+            IsRunning = false;
+        }
+
         private IEnumerator Tick()
         {
             var awaiting = new WaitForSecondsRealtime(_tickTime);
@@ -44,11 +49,6 @@ namespace Assets.Scripts.CounterComponent.Model
             }
 
             yield break;
-        }
-
-        public void Pause()
-        {
-            IsRunning = false;
         }
     }
 }
